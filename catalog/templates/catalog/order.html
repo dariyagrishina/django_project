@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="col-xl-8">
+  <h1>Оформление заказа</h1>
+  <p>Ваш заказ: {{ good.name }}</p>
+  <p>Цена: {{ good.price }} руб.</p>
+  <form action="" method="post">
+    {% csrf_token %}
+    <label for="{{ form.phone_number.id_for_label }}">Номер телефона:</label>
+    {{ form.phone_number }}
+    <label for="{{ form.address.id_for_label }}">Ваш адрес:</label>
+    {{ form.address }}
+    <span class="input-group-btn">
+      <button type="submit" class="btn btn-default">Заказать</button>
+    </span>
+  </form>
+
+</div>
+{% endblock %}

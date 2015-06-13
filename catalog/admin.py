@@ -1,0 +1,13 @@
+from django.contrib import admin
+
+from .models import Good, Tag, Order
+
+
+class OrderAdmin(admin.ModelAdmin):
+    list_display = ('id', 'phone_number', 'address', 'handle_order')
+    list_filter = ['handle_order']
+    list_editable = ['handle_order']
+
+admin.site.register(Good)
+admin.site.register(Tag)
+admin.site.register(Order, OrderAdmin)
