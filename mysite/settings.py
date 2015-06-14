@@ -103,6 +103,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-MEDIA_ROOT = '/home/dariya/Documents/Code/ilya_tasks/mysite/images'
+MEDIA_ROOT = '/home/dariya/Documents/Code/ilya_tasks/first_django_project/media'
 
 MEDIA_URL = '/media/'

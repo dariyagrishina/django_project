@@ -55,14 +55,43 @@ class TagView(ListView):
         context['current_tag'] = self.current_tag
         return context
 
+# Code produces error
+
+# class OrderView(CreateView):
+#     form_class = OrderForm
+#     template_name = 'catalog/order.html'
+#     success_url = '/catalog/ordered'
+#     model = Good
+
+#     def get_context_data(self, **kwargs):
+#         context = super(OrderView, self).get_context_data(**kwargs)
+#         self.current_good = self.get_object(queryset=None)
+#         context['good'] = self.current_good
+#         return context
+
+#     def form_valid(self, form):
+#         validate_obj = form.save()
+#         validate_obj.goods.add(self.current_good)
+#         validate_obj.save()
+#         return super(CreateView, self).form_valid(form)
 
 class OrderView(CreateView):
     form_class = OrderForm
     template_name = 'catalog/order.html'
     success_url = '/catalog/ordered'
-    model = Good
+    model = Order
+
+    def dispatch(self, request, pk=None):
+        self.current_good = get_object_or_404(Good, pk=pk)
+        return super(OrderView, self).dispatch(request, pk=pk)
 
     def get_context_data(self, **kwargs):
         context = super(OrderView, self).get_context_data(**kwargs)
-        context['good'] = self.get_object(queryset=None)
+        context['good'] = self.current_good
         return context
+
+    def form_valid(self, form):
+        validate_obj = form.save()
+        validate_obj.goods.add(self.current_good)
+        validate_obj.save()
+        return super(CreateView, self).form_valid(form)

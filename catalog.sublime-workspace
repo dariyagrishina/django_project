@@ -1,0 +1,867 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"__",
+				"__init__	init"
+			],
+			[
+				"get",
+				"get_object_or_404"
+			],
+			[
+				"c",
+				"current_tag"
+			],
+			[
+				"Tag",
+				"TagView"
+			],
+			[
+				"sef",
+				"self"
+			],
+			[
+				"View",
+				"View"
+			],
+			[
+				"price_",
+				"price__gte"
+			],
+			[
+				"p",
+				"price__lte"
+			],
+			[
+				"price",
+				"price__gte"
+			],
+			[
+				"pr",
+				"price__gte"
+			],
+			[
+				"s",
+				"slugify"
+			],
+			[
+				"label",
+				"label"
+			],
+			[
+				"dj",
+				"django_filters"
+			],
+			[
+				"l",
+				"lookup_type"
+			],
+			[
+				"ORDER",
+				"ORDER_NOT_HANDLED"
+			],
+			[
+				"OR",
+				"ORDER_HANDLED_CHOICES"
+			],
+			[
+				"order",
+				"order_handled"
+			],
+			[
+				"ma",
+				"max_length"
+			],
+			[
+				"min",
+				"min_price"
+			],
+			[
+				"max_",
+				"max_price"
+			],
+			[
+				"V",
+				"ValueError"
+			],
+			[
+				"max",
+				"maximal_price"
+			],
+			[
+				"goods",
+				"goods_1"
+			],
+			[
+				"re",
+				"request"
+			],
+			[
+				"n",
+				"number_of_pages"
+			],
+			[
+				"all",
+				"all_goods"
+			],
+			[
+				"url",
+				"urlpatterns"
+			],
+			[
+				"MED",
+				"MEDIA_URL"
+			],
+			[
+				"b",
+				"billy_cyrus"
+			],
+			[
+				"cached_",
+				"cached_get_info"
+			],
+			[
+				"in",
+				"inflected_movie"
+			],
+			[
+				"fol",
+				"folder_name_dirty"
+			],
+			[
+				"_get_path",
+				"_get_path_folder"
+			],
+			[
+				"get_p",
+				"_get_path_folder"
+			],
+			[
+				"gt",
+				"get_movies_info"
+			],
+			[
+				"mo",
+				"movie_search"
+			],
+			[
+				"search",
+				"search_query"
+			],
+			[
+				"_",
+				"_parse"
+			],
+			[
+				"_mo",
+				"_movie_matches_item"
+			],
+			[
+				"t",
+				"title"
+			],
+			[
+				"se",
+				"search_query"
+			],
+			[
+				"S",
+				"Storyline"
+			],
+			[
+				"School",
+				"school_of_rock"
+			],
+			[
+				"tr",
+				"trailer_youtube_url"
+			],
+			[
+				"text",
+				"text"
+			],
+			[
+				"search_item_",
+				"search_item_unicode"
+			],
+			[
+				"t_",
+				"t_list"
+			],
+			[
+				"te",
+				"text_lowercase"
+			],
+			[
+				"sea",
+				"search_query"
+			],
+			[
+				"m",
+				"movie_info"
+			],
+			[
+				"search_qu",
+				"search_query_list"
+			],
+			[
+				"lo",
+				"look_for_search_query"
+			],
+			[
+				"movi",
+				"movie_id"
+			],
+			[
+				"save",
+				"_save_info"
+			],
+			[
+				"movie",
+				"movie_id"
+			],
+			[
+				"move",
+				"movies_data"
+			],
+			[
+				"load",
+				"_load_info"
+			],
+			[
+				"f",
+				"films_info"
+			],
+			[
+				"margin",
+				"margin-left"
+			],
+			[
+				"des",
+				"descriptions"
+			],
+			[
+				"yer",
+				"year_span"
+			],
+			[
+				"ge",
+				"get_text"
+			],
+			[
+				"_get",
+				"_get_description"
+			],
+			[
+				"_get_d",
+				"_get_description"
+			],
+			[
+				"description",
+				"description"
+			],
+			[
+				"du",
+				"duration_with_text"
+			],
+			[
+				"de",
+				"description"
+			],
+			[
+				"soup",
+				"soup"
+			],
+			[
+				"get_",
+				"get_text"
+			],
+			[
+				"durato",
+				"duration_with_text"
+			],
+			[
+				"d",
+				"duration_with_text"
+			],
+			[
+				"ca",
+				"cached_page_path"
+			],
+			[
+				"mov",
+				"movie_storyline"
+			],
+			[
+				"def",
+				"define_file_name"
+			],
+			[
+				"file",
+				"file_name"
+			],
+			[
+				"arg",
+				"argv"
+			],
+			[
+				"moid",
+				"movie_ids"
+			],
+			[
+				"film",
+				"film_number_list"
+			],
+			[
+				"fil",
+				"film_number_list"
+			],
+			[
+				"h1",
+				"h1_line"
+			],
+			[
+				"ut",
+				"utf-8"
+			],
+			[
+				"co",
+				"content_cp1251"
+			],
+			[
+				"utf",
+				"utf8"
+			],
+			[
+				"titl",
+				"title_beginn"
+			],
+			[
+				"tit",
+				"title_beginn"
+			],
+			[
+				"title",
+				"title"
+			],
+			[
+				"ti",
+				"title_beginn"
+			],
+			[
+				"page",
+				"page_content"
+			],
+			[
+				"wra",
+				"wrapped_text"
+			],
+			[
+				"ne",
+				"number_of_expand_spaces"
+			],
+			[
+				"test",
+				"text_list"
+			],
+			[
+				"element",
+				"element_list"
+			],
+			[
+				"con",
+				"contents_of_file"
+			],
+			[
+				"check",
+				"check_profanity"
+			],
+			[
+				"tu",
+				"turtle"
+			],
+			[
+				"h",
+				"href	Attr"
+			],
+			[
+				"up",
+				"upper_level"
+			],
+			[
+				"u",
+				"upper_level"
+			],
+			[
+				"a",
+				"answered"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "catalog/views.py",
+			"settings":
+			{
+				"buffer_size": 2187,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 79.0,
+		"selected_items":
+		[
+			[
+				"djan",
+				"Set Syntax: HTML (Django)"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"set jin",
+				"Set Syntax: HTML (Jinja Templates)"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"python",
+				"Set Syntax: Python"
+			],
+			[
+				"worw",
+				"Word Wrap: Toggle"
+			],
+			[
+				"ma",
+				"Set Syntax: Markdown Extended"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"mark",
+				"Set Syntax: Markdown"
+			],
+			[
+				"indent",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 561.0
+	},
+	"console":
+	{
+		"height": 153.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/dariya/Documents/Code/ilya_tasks/mysite/catalog/templates/catalog/order.html",
+		"/home/dariya/Documents/Code/ilya_tasks/mysite/catalog/urls.py",
+		"/home/dariya/Documents/Code/ilya_tasks/mysite/catalog/admin.py",
+		"/home/dariya/Documents/Code/ilya_tasks/mysite/catalog/models.py",
+		"/home/dariya/Documents/Code/ilya_tasks/mysite/catalog/templates/catalog/good_list.html",
+		"/home/dariya/Documents/Code/funcviews.py",
+		"/home/dariya/Documents/Code/ilya_tasks/mysite/catalog/views.py",
+		"/home/dariya/Documents/Code/ilya_tasks/mysite/catalog/forms.py",
+		"/home/dariya/Documents/Code/ilya_tasks/mysite/mysite/urls.py",
+		"/home/dariya/Documents/Code/kind-of-graduation-project/venv/lib/python2.7/site-packages/py/_path/svnurl.py",
+		"/home/dariya/Documents/Code/kind-of-graduation-project/venv/lib/python2.7/site-packages/werkzeug/urls.py",
+		"/home/dariya/Documents/Code/kind-of-graduation-project/venv/lib/python2.7/encodings/mac_turkish.py",
+		"/home/dariya/Documents/Code/kind-of-graduation-project/utils.py",
+		"/home/dariya/Documents/Code/kind-of-graduation-project/venv/lib/python2.7/encodings/utf_16_le.py",
+		"/home/dariya/Documents/Code/ilya_tasks/mysite/catalog/templates/goods_list_pagination.html",
+		"/home/dariya/.config/sublime-text-3/Packages/Default/Default (Linux).sublime-keymap",
+		"/home/dariya/Documents/Code/ilya_tasks/mysite/catalog/templates/goods_list_and_pagination.html",
+		"/home/dariya/Documents/Code/ilya_tasks/mysite/catalog/static/catalog/styles.css",
+		"/home/dariya/Documents/Code/ilya_tasks/mysite/catalog/migrations/0021_auto_20150610_0944.py",
+		"/home/dariya/Documents/Code/ilya_tasks/mysite/catalog/migrations/0019_tag_slug.py",
+		"/home/dariya/Documents/Code/ilya_tasks/mysite/catalog/migrations/0020_auto_20150610_0944.py",
+		"/home/dariya/Documents/Code/ilya_tasks/mysite/catalog/templates/base.html",
+		"/home/dariya/Documents/Code/ilya_tasks/mysite/catalog/migrations/0022_auto_20150610_0815.py",
+		"/home/dariya/Documents/Code/ilya_tasks/mysite/catalog/migrations/0021_auto_20150610_0815.py",
+		"/home/dariya/Documents/Code/ilya_tasks/mysite/catalog/migrations/0020_tag_un.py",
+		"/home/dariya/Documents/Code/kind-of-graduation-project/app.py",
+		"/home/dariya/Documents/Code/ilya_tasks/mysite/catalog/templates/catalog/ordered.html",
+		"/home/dariya/Documents/Code/kind-of-graduation-project/get_info.py",
+		"/home/dariya/Documents/Code/kind-of-graduation-project/venv/lib/python2.7/site-packages/setuptools/command/install_lib.py",
+		"/home/dariya/Documents/Code/kind-of-graduation-project/cached_func.py",
+		"/home/dariya/Documents/Code/kind-of-graduation-project/venv/include/python2.7/pygame/font.h",
+		"/home/dariya/Documents/Code/kind-of-graduation-project/venv/lib/python2.7/site-packages/werkzeug/formparser.py",
+		"/home/dariya/Documents/Code/ilya_tasks/mysite/catalog/form.py",
+		"/home/dariya/Documents/Code/kind-of-graduation-project/templates/index.html",
+		"/home/dariya/Documents/Code/ilya_tasks/mysite/catalog/templates/catalog/tag.html",
+		"/home/dariya/Documents/Code/ilya_tasks/mysite/mysite/settings.py",
+		"/home/dariya/Documents/Code/kind-of-graduation-project/static/styles.css",
+		"/home/dariya/Documents/Code/kind-of-graduation-project/venv/include/python2.7/setobject.h",
+		"/home/dariya/Documents/Code/kind-of-graduation-project/venv/lib/python2.7/encodings/string_escape.py",
+		"/home/dariya/Documents/Code/ilya_tasks/mysite/catalog/templates/catalog/base.html",
+		"/home/dariya/Documents/Code/kind-of-graduation-project/static/bootstrap-3.3.4/css/bootstrap.css",
+		"/home/dariya/Documents/Code/ilya_tasks/mysite/catalog/templates/catalog/index.html",
+		"/home/dariya/Documents/Code/ilya_tasks/mysite/manage.py",
+		"/home/dariya/Documents/Code/dj_tutorial/tutorial/polls/templates/polls/index.html",
+		"/home/dariya/Documents/Code/dj_tutorial/tutorial/polls/templates/polls/detail.html",
+		"/home/dariya/Documents/Code/dj_tutorial/tutorial/polls/models.py",
+		"/home/dariya/Documents/Code/dj_tutorial/tutorial/mysite/settings.py",
+		"/home/dariya/Documents/Code/dj_tutorial/tutorial/polls/urls.py",
+		"/home/dariya/Documents/Code/Udacity/foundations_python/movies/media.py",
+		"/home/dariya/Documents/Code/dj_tutorial/tutorial/mysite/urls.py",
+		"/home/dariya/Documents/Code/dj_tutorial/tutorial/polls/admin.py",
+		"/home/dariya/Documents/Code/Udacity/foundations_python/movies/entertaiment_center.py",
+		"/home/dariya/Documents/Code/dj_tutorial/tutorial/polls/views.py",
+		"/home/dariya/Documents/Code/dj_tutorial/tutorial/polls/templates/polls/results.html",
+		"/home/dariya/Documents/Code/Udacity/foundations_python/inheritance.py",
+		"/home/dariya/Documents/Code/dj_tutorial/tutorial/templates/admin/base_site.html",
+		"/home/dariya/Documents/Code/kind-of-graduation-project/db.py",
+		"/home/dariya/Documents/Code/dj_tutorial/tutorial/polls/migrations/0001_initial.py",
+		"/home/dariya/Documents/Code/dj_tutorial/mysite/mysite/settings.py",
+		"/home/dariya/Documents/Code/Udacity/foundations_python/rename.py",
+		"/home/dariya/Documents/Code/Udacity/foundations_python/check_profanity.py",
+		"/home/dariya/Documents/Code/kind-of-graduation-project/In [1]: def make_add(n):.py",
+		"/home/dariya/Documents/Code/kind-of-graduation-project/.gitignore",
+		"/home/dariya/Documents/Code/kind-of-graduation-project/store_get_info.py",
+		"/home/dariya/Documents/Code/kind-of-graduation-project/test_db.py",
+		"/home/dariya/Documents/Code/kind-of-graduation-project/tests.py",
+		"/home/dariya/Documents/Code/Udacity/foundations_python/movies/fresh_tomatoes.py",
+		"/home/dariya/Documents/Code/Udacity/foundations_python/movies.py",
+		"/home/dariya/Documents/Code/kind-of-graduation-project/templates/form_action.html",
+		"/home/dariya/Documents/Code/kind-of-graduation-project/save_and_load_100_infos.py",
+		"/home/dariya/Documents/Code/kind-of-graduation-project/get_films_info.py",
+		"/home/dariya/Documents/Code/kind-of-graduation-project/films_info.json",
+		"/home/dariya/Documents/Code/kind-of-graduation-project/requirements.txt",
+		"/home/dariya/Documents/Code/kind-of-graduation-project/hello.py",
+		"/home/dariya/Documents/Code/kind-of-graduation-project/index2.html",
+		"/home/dariya/Documents/Code/kind-of-graduation-project/venv/lib/python2.7/site-packages/flask/templating.py",
+		"/home/dariya/Documents/Code/kind-of-graduation-project/index.html",
+		"/home/dariya/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
+		"/home/dariya/Documents/Code/kind-of-graduation-project/README.md",
+		"/home/dariya/Documents/Code/Udacity/html and css/bootstrap/index.html",
+		"/home/dariya/Documents/Code/kind-of-graduation-project/bootstrap-3.3.4/dist/main.html",
+		"/home/dariya/Documents/Code/kind-of-graduation-project/bootstrap-3.3.4/index.html",
+		"/home/dariya/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/dariya/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
+		"/home/dariya/Documents/Code/kind-of-graduation-project/API_get_info.md",
+		"/home/dariya/Documents/Code/kind-of-graduation-project/bootstrap-3.3.4/docs/examples/starter-template/index.html",
+		"/home/dariya/Documents/Code/kind-of-graduation-project/get_page.py",
+		"/home/dariya/Documents/Code/kind-of-graduation-project/try.py",
+		"/home/dariya/Documents/Code/kind-of-graduation-project/bootstrap-3.3.4/docs/_includes/nav/getting-started.html",
+		"/home/dariya/Documents/Code/kind-of-graduation-project/get_title.py",
+		"/home/dariya/Documents/Code/try.py",
+		"/home/dariya/Documents/Code/kind-of-graduation-project/mymodule.py",
+		"/home/dariya/Documents/Code/Udacity/foundations_python/media.py",
+		"/home/dariya/Documents/Code/sashas_aufgabe.py",
+		"/home/dariya/.config/sublime-text-3/Packages/User/Package Control.sublime-settings",
+		"/home/dariya/.config/sublime-text-3/Packages/Package Control/Package Control.sublime-settings",
+		"/home/dariya/Documents/Code/Udacity/foundations_python/send_text.py",
+		"/home/dariya/Documents/Code/Udacity/foundations_python/mindstorms.py",
+		"/home/dariya/Documents/Code/canvas/index.html",
+		"/home/dariya/Documents/Code/Udacity/foundations_python/my_initialises.py",
+		"/home/dariya/Documents/Code/Udacity/foundations_python/my_initialises",
+		"/home/dariya/Documents/Code/Udacity/html and css/bootstrap/css/bootstrap.css",
+		"/home/dariya/Desktop/Portfolio/framework/css/main.css",
+		"/home/dariya/Desktop/Portfolio/framework/test2.html",
+		"/media/dariya/SP UFD U2/Udacity/html and css/page_on_mock/page.html",
+		"/media/dariya/SP UFD U2/Udacity/html and css/page_on_mock/css/main.css",
+		"/home/dariya/Documents/Code/Udacity/html and css/page_on_mock/page.html",
+		"/home/dariya/Documents/Code/Udacity/html and css/test1/test2.html",
+		"/home/dariya/Documents/Code/Udacity/html and css/test1/test3.html",
+		"/home/dariya/Documents/Code/Udacity/test2.html",
+		"/home/dariya/Desktop/Portfolio/framework/test.html",
+		"/home/dariya/Documents/Code/test3.html",
+		"/home/dariya/Documents/Code/test2.html",
+		"/home/dariya/Desktop/Portfolio/framework/css/test.html",
+		"/home/dariya/Desktop/Portfolio/Toplist/style.css",
+		"/home/dariya/Desktop/Portfolio/Toplist/index.html",
+		"/home/dariya/Documents/Code/guess_123.py",
+		"/home/dariya/Documents/Code/guess_1-100.py"
+	],
+	"find":
+	{
+		"height": 37.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"page",
+			"}}&",
+			"def",
+			"order",
+			"object_list",
+			"goods",
+			"tab",
+			"page",
+			"number_of_movies",
+			"get_m",
+			"get_mo",
+			"get_inf",
+			"join",
+			"search_query",
+			"0",
+			"loads",
+			"1",
+			"styles",
+			"duration_with_text",
+			"soup.select('h1 > span:nth-of-type(2)')",
+			"length",
+			"line",
+			"length",
+			"rulers",
+			"soup",
+			"p",
+			"span",
+			"p",
+			"span",
+			")\n",
+			"12",
+			"get_file_name",
+			"define_file_name",
+			"\"\\nUSAGE: python get_title.py <film-id>+\\n\"",
+			"\"\\nUSAGE: python get_title.py <film-id>\\n\"",
+			"sys.argv[index]",
+			"film_number",
+			"film_names_list",
+			"film_number_list",
+			"page",
+			"film_number_list",
+			"# R:",
+			"20",
+			"number_of_expand_spaces",
+			")\n",
+			"answered"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "catalog/views.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2187,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								552,
+								552
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Djaneiro/Syntaxes/Python Django.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 36.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 30.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "catalog.sublime-project",
+	"replace":
+	{
+		"height": 66.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"filter",
+				"catalog/templates/catalog/good_filter.html"
+			],
+			[
+				"viw",
+				"catalog/views.py"
+			],
+			[
+				"url",
+				"catalog/urls.py"
+			],
+			[
+				"app",
+				"app.py"
+			],
+			[
+				"sett",
+				"~/Documents/Code/ilya_tasks/mysite/mysite/settings.py"
+			],
+			[
+				"get",
+				"get_info.py"
+			],
+			[
+				"uti",
+				"utils.py"
+			],
+			[
+				"",
+				"untitled"
+			],
+			[
+				"fil",
+				"films_info.json"
+			],
+			[
+				"req",
+				"requirements.txt"
+			],
+			[
+				"tes",
+				"tests.py"
+			],
+			[
+				"t",
+				"get_title.py"
+			],
+			[
+				"dtl",
+				"~/Desktop/Portfolio/Toplist/style.css"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"~/Documents/Code/kind_of_graduation_project.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 375.0,
+		"selected_items":
+		[
+			[
+				"De",
+				"Detail"
+			],
+			[
+				"gepa",
+				"get_page"
+			]
+		],
+		"width": 378.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 210.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

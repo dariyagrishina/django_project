@@ -7,7 +7,7 @@
   <div class="row">
     <p><strong>{{ good.price }} руб.</strong>
       {% for tag in good.tags.all %}
-      <a class="label label-success" href="/catalog/tag/{{ tag.id }}/">{{ tag.title }}</a>
+      <a class="label label-success" href="/catalog/tag/{{ tag.slug }}/">{{ tag.title }}</a>
       {% endfor %}
     </p>
   </div>
