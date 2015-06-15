@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 Django settings for mysite project.
 
@@ -106,3 +107,18 @@ STATIC_URL = '/static/'
 MEDIA_ROOT = '/home/dariya/Documents/Code/ilya_tasks/first_django_project/media'
 
 MEDIA_URL = '/media/'
+
+MANAGERS = (('Daria', 'dariya_for_tests@mail.ru'), )
+
+EMAIL_HOST = 'smtp.gmail.com'
+
+EMAIL_HOST_USER = 'dariya.grishina@gmail.com'
+
+EMAIL_HOST_PASSWORD = 'nxsrkijmrdpplyxk'
+
+EMAIL_PORT = 587
+
+EMAIL_USE_TLS = True
+
+# DEFAULT_FROM_EMAIL = 'dariya.grishina@gmail.com'
+SERVER_EMAIL = 'dariya.grishina@gmail.com'
