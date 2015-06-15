@@ -3,33 +3,31 @@ from django.shortcuts import get_object_or_404, render, render_to_response
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger, InvalidPage
 from django.http import HttpResponse, HttpResponseRedirect
 from django.views.generic import View
-from django.views.generic.detail import DetailView
-from django.views.generic.list import ListView
+from django.views.generic.detail import DetailView, BaseDetailView
+from django.views.generic.list import ListView, BaseListView
 from django.views.generic.edit import CreateView
+from django_filters.views import FilterView
+from django.views.generic.list import MultipleObjectMixin
+from django.views.generic.list import MultipleObjectTemplateResponseMixin
 
 from .models import Good, Tag, Order, GoodFilter, OrderForm
 
 
-class Index(ListView):
+class Index(FilterView):
     model = Good
+    filterset_class = GoodFilter
     paginate_by = 5
 
-    def get_queryset(self):
-        queryset = super(Index, self).get_queryset()
-        self.f = GoodFilter(self.request.GET, queryset=queryset)
-
-        return self.f.qs
+    def get_page_link(self):
+        price_gte = self.request.GET.get('price_gte', '')
+        price_lte = self.request.GET.get('price_lte', '')
+        name = self.request.GET.get('name', '')
+        return ''.join(['name=', name, '&price_gte=', price_gte, '&price_lte=', price_lte, '&'])
 
     def get_context_data(self, **kwargs):
         context = super(Index, self).get_context_data(**kwargs)
         context['all_tags'] = Tag.objects.all()
-        context['filter'] = self.f
-
-        price_gte = self.request.GET.get('price_gte', '')
-        price_lte = self.request.GET.get('price_lte', '')
-        name = self.request.GET.get('name', '')
-        context['page_link'] = ''.join(['name=', name, '&price_gte=', price_gte, '&price_lte=', price_lte, '&'])
-
+        context['page_link'] = self.get_page_link()
         return context
 
 
@@ -37,22 +35,24 @@ class GoodDetailView(DetailView):
     model = Good
 
 
-class TagView(ListView):
-    model = Good
+class TagView(ListView, BaseDetailView):
+    model = Tag
+    context_object_name = 'current_tag'
+    slug_field = 'slug'
     paginate_by = 5
+    template_name = 'catalog/good_filter.html'
 
-    def dispatch(self, request, slug=None):
-        self.current_tag = get_object_or_404(Tag, slug=slug)
-        return super(TagView, self).dispatch(request, slug=slug)
+    def get(self, request, *args, **kwargs):
+        self.object = self.get_object(Tag.objects.all())
+        return super(TagView, self).get(request, *args, **kwargs)
 
     def get_queryset(self):
-        tags_goods = self.current_tag.good_set.all()
-        return tags_goods
+        return self.object.good_set.all()
 
     def get_context_data(self, **kwargs):
         context = super(TagView, self).get_context_data(**kwargs)
         context['all_tags'] = Tag.objects.all()
-        context['current_tag'] = self.current_tag
+        context['current_tag'] = self.object
         return context
 
 
