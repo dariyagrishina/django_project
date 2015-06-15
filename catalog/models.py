@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
-from django.db import models
 from django.forms import ModelForm
+from django.core.mail import send_mail
 import django_filters
+from django.db import models
 
 
 class Tag(models.Model):
@@ -37,6 +38,7 @@ class Order(models.Model):
     phone_number = models.CharField(max_length=25)
     address = models.CharField(max_length=100)
     goods = models.ManyToManyField(Good)
+    email = models.EmailField(max_length=25)
 
     ORDER_HANDLED = 'OH'
     ORDER_NOT_HANDLED = 'ONH'
@@ -47,6 +49,18 @@ class Order(models.Model):
     handle_order = models.CharField(max_length=3,
                                     choices=ORDER_HANDLED_CHOICES,
                                     default=ORDER_NOT_HANDLED)
+    def save(self):
+        if self.id:
+            old_order = Order.objects.get(pk=self.id)
+            if old_order.handle_order == 'ONH' and self.handle_order == 'OH':
+                recipient = self.email
+                orders_number = str(self.id)
+                message_to_customer = ' '.join(['Уважаемый клиент! Ваш заказ под номером', orders_number,
+                    'обработан и направлен по указанному Вами адресу.'])
+                send_mail('Заказ обработан', message_to_customer,'dariya.grishina@gmail.com', [recipient],
+                    fail_silently=False)
+
+        super(Order, self).save()
 
     def __unicode__(self):
         return str(self.id)
@@ -55,4 +69,4 @@ class Order(models.Model):
 class OrderForm(ModelForm):
     class Meta:
         model = Order
-        fields = ['phone_number', 'address']
+        fields = ['phone_number', 'address', 'email']
