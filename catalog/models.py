@@ -1,12 +1,11 @@
 # -*- coding: utf-8 -*-
 from django.forms import ModelForm
-from django.core.mail import send_mail
 import django_filters
 from django.db import models
 from django.db.models.signals import pre_save, post_save
 from django.dispatch import receiver
-from django.core.exceptions import ObjectDoesNotExist
-from tasks import send_mail_handled, send_mail_about_order
+from django.core.mail import send_mail, mail_managers
+
 
 class Tag(models.Model):
     title = models.CharField(max_length=100)
@@ -69,10 +68,20 @@ def send_email_by_handling(instance, **kwargs):
     if instance.id:
         old_order = Order.objects.get(pk=instance.id)
         if old_order.handle_order == 'ONH' and instance.handle_order == 'OH':
-            send_mail_handled.delay(instance.id, instance.email)
+            message_to_customer = ' '.join(['Уважаемый клиент! Ваш заказ под номером', str(instance.id),
+            'обработан и направлен по указанному Вами адресу.'])
+
+            send_mail('Заказ обработан', message_to_customer,'dariya.grishina@gmail.com', [instance.email])
 
 
 @receiver(post_save, sender=Order)
 def send_email_about_order(instance, created, **kwargs):
     if created:
-        send_mail_about_order.delay(instance.id, instance.email)
+        message_to_customer = ' '.join(['Уважаемый клиент! Ваш заказ под номером', str(instance.id), 'поступил в обработку.'])
+        message_to_manager = 'Поступил новый заказ.'
+
+        send_mail('Подтверждение заказа', message_to_customer,
+            'dariya.grishina@gmail.com', [instance.email])
+
+        mail_managers(u'Заказ', message_to_manager)
+

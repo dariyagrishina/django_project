@@ -40,6 +40,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'catalog',
+    "djcelery_email",
     'kombu.transport.django',
 )
 
@@ -110,6 +111,8 @@ MEDIA_ROOT = '/home/dariya/Documents/Code/ilya_tasks/first_django_project/media'
 MEDIA_URL = '/media/'
 
 MANAGERS = (('Daria', 'dariya_for_tests@mail.ru'), )
+
+EMAIL_BACKEND = 'djcelery_email.backends.CeleryEmailBackend'
 
 EMAIL_HOST = 'smtp.gmail.com'
 
