@@ -40,6 +40,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'catalog',
+    'kombu.transport.django',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -122,3 +123,5 @@ EMAIL_USE_TLS = True
 
 # DEFAULT_FROM_EMAIL = 'dariya.grishina@gmail.com'
 SERVER_EMAIL = 'dariya.grishina@gmail.com'
+
+BROKER_URL = 'django://'

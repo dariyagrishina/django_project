@@ -3,7 +3,10 @@ from django.forms import ModelForm
 from django.core.mail import send_mail
 import django_filters
 from django.db import models
-
+from django.db.models.signals import pre_save, post_save
+from django.dispatch import receiver
+from django.core.exceptions import ObjectDoesNotExist
+from tasks import send_mail_handled, send_mail_about_order
 
 class Tag(models.Model):
     title = models.CharField(max_length=100)
@@ -49,18 +52,7 @@ class Order(models.Model):
     handle_order = models.CharField(max_length=3,
                                     choices=ORDER_HANDLED_CHOICES,
                                     default=ORDER_NOT_HANDLED)
-    def save(self):
-        if self.id:
-            old_order = Order.objects.get(pk=self.id)
-            if old_order.handle_order == 'ONH' and self.handle_order == 'OH':
-                recipient = self.email
-                orders_number = str(self.id)
-                message_to_customer = ' '.join(['Уважаемый клиент! Ваш заказ под номером', orders_number,
-                    'обработан и направлен по указанному Вами адресу.'])
-                send_mail('Заказ обработан', message_to_customer,'dariya.grishina@gmail.com', [recipient],
-                    fail_silently=False)
 
-        super(Order, self).save()
 
     def __unicode__(self):
         return str(self.id)
@@ -70,3 +62,17 @@ class OrderForm(ModelForm):
     class Meta:
         model = Order
         fields = ['phone_number', 'address', 'email']
+
+
+@receiver(pre_save, sender=Order)
+def send_email_by_handling(instance, **kwargs):
+    if instance.id:
+        old_order = Order.objects.get(pk=instance.id)
+        if old_order.handle_order == 'ONH' and instance.handle_order == 'OH':
+            send_mail_handled.delay(instance.id, instance.email)
+
+
+@receiver(post_save, sender=Order)
+def send_email_about_order(instance, created, **kwargs):
+    if created:
+        send_mail_about_order.delay(instance.id, instance.email)

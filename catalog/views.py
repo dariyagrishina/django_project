@@ -9,8 +9,9 @@ from django.views.generic.edit import CreateView
 from django_filters.views import FilterView
 from django.views.generic.list import MultipleObjectMixin
 from django.views.generic.list import MultipleObjectTemplateResponseMixin
-from django.core.mail import send_mail, mail_managers
+
 from .models import Good, Tag, Order, GoodFilter, OrderForm
+
 
 
 class Index(FilterView):
@@ -71,15 +72,4 @@ class OrderView(CreateView):
         validate_obj = form.save()
         validate_obj.goods.add(self.get_object(queryset=None))
         validate_obj.save()
-
-        recipient = validate_obj.email
-        orders_number = str(validate_obj.id)
-        message_to_customer = ' '.join(['Уважаемый клиент! Ваш заказ под номером', orders_number, 'поступил в обработку.'])
-        message_to_manager = 'Поступил новый заказ.'
-
-        send_mail('Подтверждение заказа', message_to_customer,
-            'dariya.grishina@gmail.com', [recipient], fail_silently=False)
-
-        mail_managers(u'Заказ', message_to_manager, fail_silently=False)
-
         return super(OrderView, self).form_valid(form)
