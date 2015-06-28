@@ -39,8 +39,8 @@ class GoodFilter(django_filters.FilterSet):
 class Order(models.Model):
     phone_number = models.CharField(max_length=25)
     address = models.CharField(max_length=100)
-    goods = models.ManyToManyField(Good)
     email = models.EmailField(max_length=25)
+    goods = models.ManyToManyField(Good, through="OrderedGood")
 
     ORDER_HANDLED = 'OH'
     ORDER_NOT_HANDLED = 'ONH'
@@ -61,6 +61,11 @@ class OrderForm(ModelForm):
     class Meta:
         model = Order
         fields = ['phone_number', 'address', 'email']
+
+class OrderedGood(models.Model):
+    order = models.ForeignKey(Order)
+    good = models.ForeignKey(Good)
+    quantity = models.IntegerField()
 
 
 @receiver(pre_save, sender=Order)

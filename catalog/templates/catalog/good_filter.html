@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="col-lg-3" style="padding-top:14em; padding-right: 7em; padding-bottom: 14em;">
+<div class="col-md-3" style="padding-top:14em; padding-right: 7em; padding-bottom: 14em;">
 
 {% for tag in all_tags %}
   <ul class="nav nav-pills nav-stacked">
@@ -12,9 +12,17 @@
     {% endif %}
   </ul>
 {% endfor %}
-
+<form id="search-form" action="" method="get">
+  {% if filter %}
+  {{ filter.form.as_p }}
+    <span class="input-group-btn">
+      <button type="submit" class="btn btn-default">Поиск</button>
+    </span>
+  {% endif %}
+</form>
 </div>
-<div class="col-lg-6 col-lg-offset-1" style="padding-top:12em; padding-bottom: 20em;">
+
+<div class="col-md-4 col-md-offset-1" style="padding-top:12em; padding-bottom: 20em;">
   <ul class="good_items">
      {% for good in object_list %}
       <li><h3><a href="/catalog/{{ good.id }}/">{{ good.name }}</a></h3></li>
@@ -63,14 +71,7 @@
     </nav>
   {% endif %}
 </div>
-<div class="col-ls-2" style="padding-top:14em; padding-bottom: 14em;">
-  <form id="search-form" action="" method="get">
-    {% if filter %}
-    {{ filter.form.as_p }}
-      <span class="input-group-btn">
-        <button type="submit" class="btn btn-default">Поиск</button>
-      </span>
-    {% endif %}
-  </form>
+<div class="col-md-3" style="padding-top:2em;">
+  {% include "cart.html" %}
 </div>
 {% endblock %}

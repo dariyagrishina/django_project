@@ -40,8 +40,9 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'catalog',
-    "djcelery_email",
+    'djcelery_email',
     'kombu.transport.django',
+    'cart',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -68,6 +69,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'catalog.context_processors.cart',
             ],
         },
     },
@@ -110,7 +112,9 @@ MEDIA_ROOT = '/home/dariya/Documents/Code/ilya_tasks/first_django_project/media'
 
 MEDIA_URL = '/media/'
 
-MANAGERS = (('Daria', 'dariya_for_tests@mail.ru'), )
+MANAGERS = (
+    ('Daria', 'dariya_for_tests@mail.ru'),
+)
 
 EMAIL_BACKEND = 'djcelery_email.backends.CeleryEmailBackend'
 
@@ -128,3 +132,5 @@ EMAIL_USE_TLS = True
 SERVER_EMAIL = 'dariya.grishina@gmail.com'
 
 BROKER_URL = 'django://'
+
+

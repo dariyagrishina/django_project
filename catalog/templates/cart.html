@@ -1,0 +1,24 @@
+<div style="padding-top:10em;">
+<h2 class="text-center">Корзина</h2>
+<table class="table">
+    {% for item in cart %}
+      <tr>
+        <td>{{ item.product.name }} </td>
+        <td>{{ item.quantity }} шт. </td>
+        <td>{{ item.total_price }} руб.</td>
+        <td>
+          <a type="button" class="btn btn-primary btn-sm" href="/catalog/remove/{{ item.object_id }}?url={{ request.path }}">Удалить</a>
+        </td>
+      </tr>
+
+{% if forloop.last %}
+</table>
+<div class="text-center">
+<a type="button" class="btn btn-success" href="/catalog/{{ good.id }}/order/">Заказать</a>
+</div>
+{% endif %}
+  {% empty %}
+
+<div>Ваша корзина пока пуста</div>
+     {% endfor %}
+</div>

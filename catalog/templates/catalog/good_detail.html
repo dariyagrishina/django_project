@@ -1,18 +1,24 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="text-center">
-  <h1>{{ good.name }}</h1>
-  <img src="{{ good.image.url }}" class="center-block" alt="{{ good.name }}">
-  <div class="row">
-    <p><strong>{{ good.price }} руб.</strong>
-      {% for tag in good.tags.all %}
-      <a class="label label-success" href="/catalog/tag/{{ tag.slug }}/">{{ tag.title }}</a>
-      {% endfor %}
-    </p>
+<div class="col-md-4"></div>
+<div class="col-md-4">
+  <div class="text-center">
+    <h1>{{ good.name }}</h1>
+    <img src="{{ good.image.url }}" class="center-block" alt="{{ good.name }}">
+    <div class="row">
+      <p><strong>{{ good.price }} руб.</strong>
+        {% for tag in good.tags.all %}
+        <a class="label label-success" href="/catalog/tag/{{ tag.slug }}/">{{ tag.title }}</a>
+        {% endfor %}
+      </p>
+    </div>
+    <div>
+      <a type="button" class="btn btn-warning" href="/catalog/add/{{ good.id }}?url={{ request.path }}">Добавить в корзину</a>
+    </div>
   </div>
-  <div>
-  <a type="button" class="btn btn-primary" href="/catalog/{{ good.id }}/order/">Заказать</a>
-  </div>
+</div>
+<div class="col-md-4">
+{% include "cart.html" %}
 </div>
 {% endblock %}
