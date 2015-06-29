@@ -11,6 +11,6 @@ urlpatterns = [
     url(r'^(?P<pk>[0-9]+)/$', views.detail, name='detail'),
     url(r'^add/(?P<pk>[0-9]+)/$', views.add_item, name='add_item'),
     url(r'^remove/(?P<pk>[0-9]+)/$', views.remove_item, name='remove_item'),
-    url(r'^(?P<pk>[0-9]+)/order/$', views.OrderView.as_view(), name='order'),
+    url(r'^order/$', views.OrderView.as_view(), name='order'),
     url(r'^ordered/$', TemplateView.as_view(template_name='ordered.html'), name='ordered'),
 ]

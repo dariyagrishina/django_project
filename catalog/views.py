@@ -82,14 +82,11 @@ class OrderView(CreateView):
     success_url = '/catalog/ordered'
     model = Good
 
-    def get_context_data(self, **kwargs):
-        context = super(OrderView, self).get_context_data(**kwargs)
-        context['good'] = self.get_object(queryset=None)
-        return context
-
     def form_valid(self, form):
         validate_obj = form.save()
+        cart = Cart(self.request)
         for item in Cart(self.request):
             ordered = OrderedGood.objects.create(order=validate_obj, good=item.product, quantity=item.quantity)
+            cart.remove(item.product)
 
         return super(OrderView, self).form_valid(form)
